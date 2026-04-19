@@ -67,7 +67,8 @@ WHERE ST_NumInteriorRings(geom) = 0;
 -- Hint: Use the nyc_streets table
 
 -- TODO: Write your query below
-
+SELECT SUM(ST_Length(geom)) / 1609.34 AS total_length_miles
+FROM nyc_streets;
 
 
 
